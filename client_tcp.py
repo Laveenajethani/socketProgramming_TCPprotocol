@@ -7,6 +7,7 @@ while True:
     send_msg=input("What msg you want to send to server {}: ".format(server_IP))
     if(send_msg=='exit'):
         s.send(b"exit")
+        s.close()
         break
     send_msg=send_msg.encode()
     s.send(send_msg)
