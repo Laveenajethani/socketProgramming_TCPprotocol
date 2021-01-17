@@ -16,7 +16,7 @@ def myfun(c,addr):
         if(c_recv=='exit'):
             break
         output=sb.getstatusoutput(c_recv)
-        reply=str(output)
+        reply=str(output[1])
         #reply=input("What msg you want to send to client {}: ".format(addr[0]))
         reply=reply.encode()
         c.send(reply)
@@ -29,3 +29,4 @@ def server():
         myth.start()
 
 server()
+~
