@@ -29,4 +29,3 @@ def server():
         myth.start()
 
 server()
-~
